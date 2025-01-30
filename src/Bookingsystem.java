@@ -11,8 +11,8 @@ public class Bookingsystem {
         this.bus = bus;
     }
 
-    public void menu(){
-
+    public static void menu(){
+        System.out.println("uahduihaud");
     }
 
     public void createBooking(){

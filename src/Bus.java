@@ -11,7 +11,9 @@ public class Bus {
     }
 
     public Seat getSeatinfo(){
-
-        return ;
+        if (!seats.isEmpty()){
+            return seats.get(0);
+        }
+        return null;
     }
 }

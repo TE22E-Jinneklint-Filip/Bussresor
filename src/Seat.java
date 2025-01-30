@@ -10,7 +10,7 @@ public class Seat {
     }
 
     public void changeBookingStatus(){
-
+        this.booked = !this.booked;
     }
 
 
