@@ -1,18 +1,26 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Bus {
-    private ArrayList<Seat> seats = new ArrayList<Seat>();
+    private ArrayList<Seat> seats = new ArrayList<>();
     private String destination;
 
-    public Bus(ArrayList<Seat> seats, String destination){
-        this.seats = seats;
+    public Bus(String destination) {
         this.destination = destination;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ange antal platser i bussen: ");
+        int seatCount = scanner.nextInt();
+        for (int i = 1; i <= seatCount; i++) {
+            seats.add(new Seat(i, this));
+        }
 
     }
 
-    public Seat getSeatinfo(){
-        if (!seats.isEmpty()){
-            return seats.get(0);
+    public Seat getSeatInfo(int seatNumber) {
+        for (Seat seat : seats) {
+            if (seat.getNumber() == seatNumber) {
+                return seat;
+            }
         }
         return null;
     }

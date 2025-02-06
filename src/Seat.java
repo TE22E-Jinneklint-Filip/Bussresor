@@ -3,15 +3,18 @@ public class Seat {
     private Bus bus;
     private boolean booked;
 
-    public Seat(int number, Bus bus, boolean booked){
+    public Seat(int number, Bus bus, boolean booked) {
         this.number = number;
         this.bus = bus;
         this.booked = booked;
     }
 
-    public void changeBookingStatus(){
-        this.booked = !this.booked;
+    public int getNumber() {
+        return number;
     }
 
+    public void changeBookingStatus() {
+        this.booked = !this.booked;
+    }
 
 }
